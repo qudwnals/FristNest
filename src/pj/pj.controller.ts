@@ -4,7 +4,12 @@ import {PjService} from "./pj.service";
 
 @Controller()
 export class PjController {
-    constructor(private readonly pjService: PjService) {}
+    private readonly pjService:PjService;
+
+    constructor(pjService : PjService) {
+        this.pjService = pjService;
+    }
+
 
     @Get()
     getWelcome(): string {
